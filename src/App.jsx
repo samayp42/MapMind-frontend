@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post('http://localhost:8000/analyze-area', {
+      const response = await axios.post(REACT_APP_BACKEND_URL+'analyze-area', {
         city: city,
         area: area
       });
