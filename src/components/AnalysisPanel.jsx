@@ -55,9 +55,7 @@ const AnalysisPanel = ({ analysis, city, area }) => {
             <p className="location-city">{city}</p>
           </div>
         </div>
-        
-        <p>{typeof analysis.summary === 'object' ? JSON.stringify(analysis.summary) : analysis.summary || "No summary available."}</p>
-        
+                
         <h4>POI Distribution</h4>
         <div className="chart-container">
           {processedPieData.length > 0 ? (
@@ -94,7 +92,9 @@ const AnalysisPanel = ({ analysis, city, area }) => {
             <p className="no-data">No distribution data available.</p>
           )}
         </div>
-        
+
+        <p>{typeof analysis.summary === 'object' ? JSON.stringify(analysis.summary) : analysis.summary || "No summary available."}</p>
+
         <h4>Market Insights</h4>
         {analysis.insights && analysis.insights.length > 0 ? (
           <ul className="insights-list">
